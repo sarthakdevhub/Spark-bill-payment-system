@@ -2,8 +2,10 @@ package ui;
 
 import java.util.List;
 import java.util.Scanner;
+
 import dao.ConsumerDAO;
 import dao.ConsumerDAOImpl;
+import dto.ConsumerDTO;
 import exception.NoRecordFoundException;
 import exception.SomeThingWrongException;
 
@@ -20,8 +22,22 @@ public class ConsumerUI {
 	
 	public void viewAllConsumer() {
 		try {
-			List<User> listUsers = consumerDAO.getAllUsersList();
+			List<ConsumerDTO> listUsers = consumerDAO.getAllConsumerList();
+			System.out.println("conId  |   name  |  username  |  password  |  isActive");
 			listUsers.forEach(System.out::println);
+		}catch(SomeThingWrongException | NoRecordFoundException ex) {
+//			ex.printStackTrace();
+			System.out.println(ex);
+		}
+	}
+	public void deleteConsumer() {
+		//code to take input category details
+		System.out.print("Enter Consumer id ");
+		String catId = scanner.next();
+		
+		try {
+			consumerDAO.deleteConsumer(catId);
+			System.out.println("Consumer deleted successfully");
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
 		}

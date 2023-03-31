@@ -14,8 +14,9 @@ public class MainUI {
 		System.out.println("1. View all consumer");
 		System.out.println("2. View the bill of the consumer");
 		System.out.println("3. View all the bills");
-		System.out.println("4. View all bills paid and pending");
-		System.out.println("5. Delete consumer");
+		System.out.println("4. View all the pending bills");
+		System.out.println("5. View all the paid bills");
+		System.out.println("6. Delete consumer");
 		System.out.println("0. for Exit");
 	}
 	static void adminMenu(Scanner sc) {
@@ -32,10 +33,19 @@ public class MainUI {
 					consumerUI.viewAllConsumer();
 					break;
 				case 2:
-//					categoryUI.viewAllCategories();
+					billUI.viewbillofConsumer();
 					break;
 				case 3:
-//					categoryUI.updateCategory();
+					billUI.viewAllbills();
+					break;
+				case 4:
+					billUI.viewAllPendingbills();
+					break;
+				case 5:
+					billUI.viewAllPaidbills();
+					break;
+				case 6:
+					consumerUI.deleteConsumer();
 					break;
 				default:
 					System.out.println("Invalid Selection, try again");
@@ -54,58 +64,58 @@ public class MainUI {
 			System.out.println("Invalid Username and Password");
 		}
 	}
-	static void displayCustomerMenu() {
-		System.out.println("1. View All Products");
-		System.out.println("2. Purchase a Product");
-		System.out.println("3. View Order History");
-		System.out.println("4. Update My Name");
-		System.out.println("5. Update My Password");
-		System.out.println("6. Delete My Account");
-		System.out.println("0. Logout");
-	}
-	
-	static void customerLogin(Scanner sc) {
-//		if(!userUI.login())
-//			return;
-
-		//you are here means login is successful
-		int choice = 0;
-		do {
-			displayCustomerMenu();
-			System.out.print("Enter selection ");
-			choice = sc.nextInt();
-			switch(choice) {
-				case 1:
-//					productUI.viewAllProducts();
-					break;
-				case 2:
-//					orderUI.purchaseProduct();
-					break;
-				case 3:
-//					orderUI.viewOrderDetails();
-					break;
-				case 4:
-//					userUI.updateNameOfUser();
-					break;
-				case 5:
-//					userUI.changePassword();
-					break;
-				case 6:
-//					userUI.deleteUser();
-					try{
-						Thread.sleep(2000);
-					}catch(InterruptedException ex) {
-						
-					}
-					//no break statement here i.e. after deletion of user account, logout will also take place
-				case 0:
-//					userUI.logout();
-					break;
-				default:
-					System.out.println("Invalid Selection, try again");
-			}
-		}while(LoggedINUser.loggedInUserId != 0);
-	}
+//	static void displayCustomerMenu() {
+//		System.out.println("1. View All Products");
+//		System.out.println("2. Purchase a Product");
+//		System.out.println("3. View Order History");
+//		System.out.println("4. Update My Name");
+//		System.out.println("5. Update My Password");
+//		System.out.println("6. Delete My Account");
+//		System.out.println("0. Logout");
+//	}
+//	
+//	static void customerLogin(Scanner sc) {
+////		if(!userUI.login())
+////			return;
+//
+//		//you are here means login is successful
+//		int choice = 0;
+//		do {
+//			displayCustomerMenu();
+//			System.out.print("Enter selection ");
+//			choice = sc.nextInt();
+//			switch(choice) {
+//				case 1:
+////					productUI.viewAllProducts();
+//					break;
+//				case 2:
+////					orderUI.purchaseProduct();
+//					break;
+//				case 3:
+////					orderUI.viewOrderDetails();
+//					break;
+//				case 4:
+////					userUI.updateNameOfUser();
+//					break;
+//				case 5:
+////					userUI.changePassword();
+//					break;
+//				case 6:
+////					userUI.deleteUser();
+//					try{
+//						Thread.sleep(2000);
+//					}catch(InterruptedException ex) {
+//						
+//					}
+//					//no break statement here i.e. after deletion of user account, logout will also take place
+//				case 0:
+////					userUI.logout();
+//					break;
+//				default:
+//					System.out.println("Invalid Selection, try again");
+//			}
+//		}while(LoggedINUser.loggedInUserId != 0);
+//	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		billUI = new BillUI(sc);
