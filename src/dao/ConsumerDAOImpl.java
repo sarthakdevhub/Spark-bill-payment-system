@@ -138,6 +138,9 @@ public class ConsumerDAOImpl implements ConsumerDAO {
 			PreparedStatement ps1 = connection.prepareStatement(QUERY1);
 			ps1.setString(1, cID);
 			ResultSet rs = ps1.executeQuery();
+			if(DBUtils.isResultSetEmpty(rs)) {
+				throw new NoRecordFoundException("No Bill Found");
+			}
 			rs.next();
 			due = rs.getDouble(1);
 			paid = rs.getDouble(2);

@@ -29,6 +29,7 @@ public class ConsumerUI {
 		try {
 			List<ConsumerDTO> listUsers = consumerDAO.getAllConsumerList();
 			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("------------------------------------------------------");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 //			ex.printStackTrace();
