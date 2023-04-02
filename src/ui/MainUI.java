@@ -59,7 +59,9 @@ public class MainUI {
 		String password = sc.next();
 		
 		if(username.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin")) {
+			System.out.println();
 			System.out.println("Welcome Admin");
+			System.out.println();
 			adminMenu(sc);
 		}else {
 			System.out.println("Invalid Username and Password");

@@ -24,7 +24,8 @@ public class BillUI {
 			System.out.println("Enter ConsumerID");
 			String cID = sc.next();
 			List<BillDTO> listUsers = billDAO.getBillofConsumer(cID);
-			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
+			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -36,6 +37,7 @@ public class BillUI {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllBills();
 			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
+			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -46,6 +48,7 @@ public class BillUI {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllPendingBills();
 			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
+			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -56,6 +59,7 @@ public class BillUI {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllPaidBills();
 			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
+			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
