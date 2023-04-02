@@ -26,13 +26,14 @@ public class MainUI {
 			choice = sc.nextInt();
 			switch(choice) {
 				case 0:
-					System.out.println("Bye Bye admin");
+					System.out.println("Admin Logged Out");
 					break;
 				case 1:
 					consumerUI.viewAllConsumer();
 					break;
 				case 2:
 					billUI.viewbillofConsumer();
+					
 					break;
 				case 3:
 					billUI.viewAllbills();
@@ -58,6 +59,7 @@ public class MainUI {
 		String password = sc.next();
 		
 		if(username.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin")) {
+			System.out.println("Welcome Admin");
 			adminMenu(sc);
 		}else {
 			System.out.println("Invalid Username and Password");
@@ -87,7 +89,7 @@ public class MainUI {
 					consumerUI.history();
 					break;
 				case 3:
-//					complaintUI.query();
+					complaintUI.query();
 					break;
 				case 0:
 					consumerUI.logout();
@@ -110,6 +112,13 @@ public class MainUI {
 		billUI = new BillUI(sc);
 		complaintUI = new ComplaintUI(sc);
 		consumerUI = new ConsumerUI(sc);
+		
+		System.out.println("|-------------------------------------------------------|");
+		System.out.println("|                                                       |");
+		System.out.println("|                  Spark Power Limited                  |");
+		System.out.println("|                                                       |");
+		System.out.println("|-------------------------------------------------------|");
+		System.out.println();
 		
 		int choice = 0;
 		do {

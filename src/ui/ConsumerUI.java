@@ -72,6 +72,7 @@ public class ConsumerUI {
 	
 	
 	public void signUp(){
+		scanner = new Scanner(System.in);
 		System.out.print("Enter your firstname: ");
         String firstname = scanner.nextLine();
         System.out.print("Enter your lastname: ");
@@ -87,9 +88,9 @@ public class ConsumerUI {
         System.out.print("Enter your email: ");
         String email = scanner.nextLine();
 		System.out.println("Enter Security Question");
-		String Sques = scanner.next();
+		String Sques = scanner.nextLine();
 		System.out.println("Enter Security Answer");
-		String Sans = scanner.next();
+		String Sans = scanner.nextLine();
 		
 		ConsumerSignUpDTO consign = new ConsumerSignUpDTOImpl(firstname, lastname, username, password, address, mobile, email, Sques, Sans);
 		try {

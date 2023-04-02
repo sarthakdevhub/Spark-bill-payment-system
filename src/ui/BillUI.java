@@ -24,7 +24,7 @@ public class BillUI {
 			System.out.println("Enter ConsumerID");
 			String cID = sc.next();
 			List<BillDTO> listUsers = billDAO.getBillofConsumer(cID);
-//			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("conId  |   name  |  username  |  password  |  isActive");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -35,7 +35,7 @@ public class BillUI {
 	public void viewAllbills() {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllBills();
-//			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -45,7 +45,7 @@ public class BillUI {
 	public void viewAllPendingbills() {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllPendingBills();
-//			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
@@ -55,7 +55,7 @@ public class BillUI {
 	public void viewAllPaidbills() {
 		try {
 			List<BillDTO> listUsers = billDAO.getAllPaidBills();
-//			System.out.println("conId  |   name  |  username  |  password  |  isActive");
+			System.out.println("ConsumerID | UnitConsumed | startdate | endDate | fixedCharge | tax | totalAmount | AmountDue | AmountPaid | DueDate | PaymentDate | Paid");
 			listUsers.forEach(System.out::println);
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);

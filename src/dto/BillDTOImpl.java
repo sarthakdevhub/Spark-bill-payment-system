@@ -115,8 +115,8 @@ public class BillDTOImpl implements BillDTO {
 	}
 	@Override
 	public String toString() {
-		return  cID +" | "+  unit +" | "+  start +" | "+ end +" | "+  fcharge  +" | "+ tax +" | "+ totalAmount +" | "+
-	amountDue+" | "+  amountPaid +" | "+  dueDate +" | "+  paymentDate +" | "+ isPaid ;
+		return  cID +"       |  "+  unit +"  |  "+  start +"  |  "+ end +"  |  "+  fcharge  +"  |  "+ tax +"  |  "+ totalAmount +"  |  "+
+	amountDue+"  |  "+  amountPaid +"  |  "+  dueDate +"  |  "+  paymentDate +"  |  "+ isPaid ;
 	}
 	
 	
