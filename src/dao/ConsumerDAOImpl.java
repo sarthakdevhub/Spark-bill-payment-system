@@ -180,7 +180,7 @@ public class ConsumerDAOImpl implements ConsumerDAO {
 		}
 		return due;
 	}
-	;
+	
 	private List<BilldetailDTO> getBillListFromResultSet(ResultSet resultSet) throws SQLException{
 		List<BilldetailDTO> list = new ArrayList<>();
 		while(resultSet.next()) {
@@ -280,7 +280,7 @@ public class ConsumerDAOImpl implements ConsumerDAO {
 			connection = DBUtils.connectToDatabase();
 			//prepare the query
 			String QUERY = "select id from consumerdetail"
-					+ " order by id"
+					+ " order by id desc"
 					+ " limit 1;";
 			
 			//get the prepared statement object
@@ -312,16 +312,16 @@ public class ConsumerDAOImpl implements ConsumerDAO {
 			connection = DBUtils.connectToDatabase();
 			//prepare the query
 			String userID = "C"+getConsumerID();
-			if(!checkUsername(con.getUsername())) {
+			if(checkUsername(con.getUsername())==true) {
 				throw new InvalidUserNameException();
 			}
+
 			String SignIN_QUERY = "insert into consumerdetail"
 							+ " (firstname,lastname,username,password,address,mobile,email,securityques,"
-							+ "securityans,consumer_id"
+							+ "securityans,consumer_id)"
 							+ " Values"
-							+ " (?,?,?,?,?,?,?,?,?,?";
+							+ " (?,?,?,?,?,?,?,?,?,?);";
 			
-			//get the prepared statement object
 			PreparedStatement ps = connection.prepareStatement(SignIN_QUERY);
 			ps.setString(1,con.getFname());
 			ps.setString(2,con.getLname());
