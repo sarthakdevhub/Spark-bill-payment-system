@@ -8,7 +8,7 @@ inflated meter reading, pending previous month bill, etc.)
 There are 2 users in the system:
 1. Administrator
 2. Consumer
-The Role of the Administrator:
+## The Role of the Administrator:
 Note: Don't create a table to store the credentials of the administrator. Keep the
 username and password fixed for admin (like username: ‘admin’ password: ‘admin’)
 1. Login with his account.
@@ -18,7 +18,7 @@ Electricity Bill Payment System 2
 4. View all the bills.
 5. View all bills paid and pending
 6. Delete consumer (means set the consumer connection inactive)
-The Role of a Consumer:
+## The Role of a Consumer:
 1. The consumer can sign-up. At the time of sign up first name, last name, username,
 password, address, mobile number, and email should be taken.
 2. Login with his account
