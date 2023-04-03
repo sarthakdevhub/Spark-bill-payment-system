@@ -1,3 +1,5 @@
+![My Image](images/spark.png)
+
 # Bill payment System
 The Electricity bill corporation of Rajasthan has provided an application to view/pay bills
 to consumers. Bills are generated monthly i.e. bill cycle is from the 1st of every month to
