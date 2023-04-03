@@ -1,4 +1,4 @@
-![My Image](images/spark.png)
+![My Image](images/Spark.png)
 
 # Bill payment System
 The Electricity bill corporation of Rajasthan has provided an application to view/pay bills
