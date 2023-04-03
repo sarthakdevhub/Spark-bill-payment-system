@@ -24,4 +24,7 @@ password, address, mobile number, and email should be taken.
 2. Login with his account
 3. Pay bill
 4. View his own transaction History
-<img src="C:\Users\ndevr\OneDrive\Desktop\er.png" alt="Alt text" title="Optional title">
+
+
+![My Image](images/er.png)
+![My Image](images/flow.png)
