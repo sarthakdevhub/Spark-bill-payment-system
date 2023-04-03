@@ -60,7 +60,7 @@ public class MainUI {
 		
 		if(username.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin")) {
 			System.out.println();
-			System.out.println("Welcome Admin");
+			System.out.println("---- Welcome Admin ----");
 			System.out.println();
 			adminMenu(sc);
 		}else {
