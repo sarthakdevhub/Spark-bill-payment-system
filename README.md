@@ -27,6 +27,12 @@ password, address, mobile number, and email should be taken.
 3. Pay bill
 4. View his own transaction History
 
+##Tech-stack used
+JAVA
+MYSQL
+JDBC
+GitHub
+
 
 ![My Image](images/er.png)
 ![My Image](images/flow.png)
