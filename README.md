@@ -28,10 +28,10 @@ password, address, mobile number, and email should be taken.
 4. View his own transaction History
 
 ## Tech-stack used
-JAVA
-MYSQL
-JDBC
-GitHub
+JAVA\n
+MYSQL\n
+JDBC\n
+GitHub\n
 
 
 ![My Image](images/er.png)
