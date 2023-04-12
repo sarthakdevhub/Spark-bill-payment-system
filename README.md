@@ -27,7 +27,7 @@ password, address, mobile number, and email should be taken.
 3. Pay bill
 4. View his own transaction History
 
-##Tech-stack used
+## Tech-stack used
 JAVA
 MYSQL
 JDBC
