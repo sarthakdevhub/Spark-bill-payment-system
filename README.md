@@ -34,6 +34,8 @@ password, address, mobile number, and email should be taken.
 4. GitHub
 <br />
 
+## ER Diagram
 ![My Image](images/er.png)
 <br />
+## Flow Chart
 ![My Image](images/flow.png)
