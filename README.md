@@ -32,7 +32,8 @@ password, address, mobile number, and email should be taken.
 2. MYSQL
 3. JDBC
 4. GitHub
-
+<br />
 
 ![My Image](images/er.png)
+<br />
 ![My Image](images/flow.png)
