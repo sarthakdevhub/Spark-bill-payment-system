@@ -31,7 +31,9 @@ public class ComplaintUI {
 //		System.out.println(query);
 		try {
 			complaintDAO.raiseQuery(id,date,query);
+			System.out.println();
 			System.out.println("Complaint raised successfully");
+			System.out.println();
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
 		}	

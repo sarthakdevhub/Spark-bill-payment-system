@@ -26,7 +26,9 @@ public class MainUI {
 			choice = sc.nextInt();
 			switch(choice) {
 				case 0:
+					System.out.println();
 					System.out.println("Admin Logged Out");
+					System.out.println();
 					break;
 				case 1:
 					consumerUI.viewAllConsumer();
@@ -95,6 +97,9 @@ public class MainUI {
 					break;
 				case 0:
 					consumerUI.logout();
+					System.out.println();
+					System.out.println("Logged Out");
+					System.out.println();
 					break;
 				default:
 					System.out.println("Invalid Selection, try again");
@@ -115,11 +120,11 @@ public class MainUI {
 		complaintUI = new ComplaintUI(sc);
 		consumerUI = new ConsumerUI(sc);
 		
-		System.out.println("|-------------------------------------------------------|");
+		System.out.println("---------------------------------------------------------");
 		System.out.println("|                                                       |");
 		System.out.println("|                  Spark Power Limited                  |");
 		System.out.println("|                                                       |");
-		System.out.println("|-------------------------------------------------------|");
+		System.out.println("---------------------------------------------------------");
 		System.out.println();
 		
 		int choice = 0;

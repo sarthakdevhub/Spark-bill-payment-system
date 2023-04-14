@@ -28,12 +28,15 @@ public class ConsumerUI {
 	public void viewAllConsumer() {
 		try {
 			List<ConsumerDTO> listUsers = consumerDAO.getAllConsumerList();
+			System.out.println();
 			System.out.println("conId  |   name  |  username  |  password  |  isActive");
 			System.out.println("------------------------------------------------------");
 			listUsers.forEach(System.out::println);
+			System.out.println();
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 //			ex.printStackTrace();
 			System.out.println(ex);
+			System.out.println();
 		}
 	}
 	public void deleteConsumer() {
@@ -46,6 +49,7 @@ public class ConsumerUI {
 			System.out.println("Consumer deleted successfully");
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
+			System.out.println();
 		}
 	}
 	
@@ -53,21 +57,27 @@ public class ConsumerUI {
 		int id = LoggedINUser.loggedInUserId;
 		//code to take input category details
 		try {
+			System.out.println();
 			System.out.println("Bill Paid\nAmount Due "+consumerDAO.payBill(id));
+			System.out.println();
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
+			System.out.println();
 		}
 	}
 	
 	public void history() {
 		int id = LoggedINUser.loggedInUserId;
 		try {
+			System.out.println();
 			List<BilldetailDTO> listUsers = consumerDAO.billHistory(id);
 			System.out.println("Payment Date  |   Due Date  |  Amount Paid  |  Unit consumed  ");
 			listUsers.forEach(System.out::println);
+			System.out.println();
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 //			ex.printStackTrace();
 			System.out.println(ex);
+			System.out.println();
 		}
 	}
 	
@@ -97,8 +107,10 @@ public class ConsumerUI {
 		try {
 			consumerDAO.signUp(consign);
 			System.out.println("Sign Up Successful");
+			System.out.println();
 		} catch (SomeThingWrongException |NoRecordFoundException| InvalidUserNameException e) {
 			System.out.println(e);
+			System.out.println();
 		} 
 	}
 	
@@ -112,10 +124,13 @@ public class ConsumerUI {
 		
 		try {
 			consumerDAO.Login(username, password);
-			System.out.println("Welcome "+username);
+			System.out.println();
+			System.out.println("------Welcome "+username+" ------");
+			System.out.println();
 			loginSuccessful = true;
 		}catch(SomeThingWrongException | NoRecordFoundException ex) {
 			System.out.println(ex);
+			System.out.println();
 		}
 		return loginSuccessful;
 	}
